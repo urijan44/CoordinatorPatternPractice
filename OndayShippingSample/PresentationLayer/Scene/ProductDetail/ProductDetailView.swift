@@ -12,7 +12,6 @@ struct ProductDetailView: View {
   var body: some View {
     VStack {
       Text("Hello, World!")
-      Button(action: {viewModel.showCart()}, label: {Image(systemName: "cart")})
     }
   }
   

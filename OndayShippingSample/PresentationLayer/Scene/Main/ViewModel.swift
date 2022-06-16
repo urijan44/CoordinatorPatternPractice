@@ -20,7 +20,7 @@ final class ViewModel {
   }
   
   func goDetail() {
-    coordinator.goDetail()
+    coordinator.goDetail(source: nil)
   }
 }
 

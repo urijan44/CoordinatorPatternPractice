@@ -10,7 +10,7 @@ import SwiftUI
 
 protocol AppContainerInterface {
   func makeViewController(coordinator: AppCoordinatorInterface) -> UIViewController
-  func makeCartViewController() -> UIViewController
+  func  makeCartViewController(coordinator: AppCoordinatorInterface) -> UIViewController
   func makeProductDetailViewController(coordinator: ProductDetailCoordinatorInterface) -> UIViewController
 }
 
@@ -21,8 +21,8 @@ struct DIContainer: AppContainerInterface {
     return vc
   }
   
-  func makeCartViewController() -> UIViewController {
-    UIHostingController(rootView: CartView())
+  func makeCartViewController(coordinator: AppCoordinatorInterface) -> UIViewController {
+    CartViewController(coordinator: coordinator)
   }
   
   func makeProductDetailViewController(coordinator: ProductDetailCoordinatorInterface) -> UIViewController {

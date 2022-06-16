@@ -10,7 +10,7 @@ import UIKit
 
 protocol AppRouterInterface {
   func showCart(navigation: UINavigationController?, presenter: UIViewController?, destination: UIViewController)
-  func goProductDetail(navigation: UINavigationController, destination: UIViewController)
+  func goProductDetail(source: UIViewController, destination: UIViewController)
 }
 
 final class AppRouter: AppRouterInterface {
@@ -23,7 +23,12 @@ final class AppRouter: AppRouterInterface {
     }
   }
   
-  func goProductDetail(navigation: UINavigationController, destination: UIViewController) {
-    navigation.pushViewController(destination, animated: true)
+  func goProductDetail(source: UIViewController, destination: UIViewController) {
+    
+    if let navigation = source as? UINavigationController {
+      navigation.pushViewController(destination, animated: true)
+    } else {
+      source.present(destination, animated: true)
+    }
   }
 }

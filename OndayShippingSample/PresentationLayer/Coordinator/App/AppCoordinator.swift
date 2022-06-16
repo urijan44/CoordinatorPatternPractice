@@ -11,7 +11,7 @@ import SwiftUI
 protocol AppCoordinatorInterface {
   func start(window: UIWindow)
   func showCart()
-  func goDetail()
+  func goDetail(source: UIViewController?)
 }
 
 final class AppCoordinator: AppCoordinatorInterface, ProductDetailCoordinatorInterface {
@@ -26,13 +26,13 @@ final class AppCoordinator: AppCoordinatorInterface, ProductDetailCoordinatorInt
     window.makeKeyAndVisible()
   }
   
-  func goDetail() {
+  func goDetail(source: UIViewController? = nil) {
     let destination = container.makeProductDetailViewController(coordinator: self)
-    router.goProductDetail(navigation: rootNavigation, destination: destination)
+    router.goProductDetail(source: source == nil ? rootNavigation : source!, destination: destination)
   }
   
   func showCart() {
-    let destination = container.makeCartViewController()
+    let destination = container.makeCartViewController(coordinator: self)
     if let presenter = rootNavigation.topViewController {
       router.showCart(navigation: nil, presenter: presenter, destination: destination)
     } else {

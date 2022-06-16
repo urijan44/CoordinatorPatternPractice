@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8522ED17285B27FE00AF70A0 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8522ED16285B27FE00AF70A0 /* CartViewController.swift */; };
 		8543BFB528599344007362E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BFB428599344007362E2 /* AppDelegate.swift */; };
 		8543BFB728599344007362E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BFB628599344007362E2 /* SceneDelegate.swift */; };
 		8543BFB928599344007362E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BFB828599344007362E2 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8522ED16285B27FE00AF70A0 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		8543BFB128599344007362E2 /* OndayShippingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OndayShippingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8543BFB428599344007362E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8543BFB628599344007362E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +59,9 @@
 				8543BFB328599344007362E2 /* OndayShippingSample */,
 				8543BFB228599344007362E2 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		8543BFB228599344007362E2 /* Products */ = {
 			isa = PBXGroup;
@@ -83,8 +87,8 @@
 		85BE0AA12859CBD000B45F01 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				85BE0AB52859DA5D00B45F01 /* ProductDetail */,
 				85BE0AA22859CBD700B45F01 /* Main */,
+				85BE0AB52859DA5D00B45F01 /* ProductDetail */,
 				85BE0AA32859CBDB00B45F01 /* Cart */,
 			);
 			path = Scene;
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8573FFC62859C0F00090155D /* CartView.swift */,
+				8522ED16285B27FE00AF70A0 /* CartViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				8573FFC52859BE5D0090155D /* AppCoordinator.swift in Sources */,
 				85BE0AB72859DA6E00B45F01 /* ProductDetailView.swift in Sources */,
 				85BE0AA52859CBED00B45F01 /* RootView.swift in Sources */,
+				8522ED17285B27FE00AF70A0 /* CartViewController.swift in Sources */,
 				8543BFB928599344007362E2 /* ViewController.swift in Sources */,
 				85BE0AB42859D70D00B45F01 /* ProductDetailCoordinator.swift in Sources */,
 				85BE0AAC2859CC4300B45F01 /* AppRouter.swift in Sources */,
